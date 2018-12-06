@@ -41,4 +41,4 @@ USER deploy
 
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku			
-  CMD twistd --nodaemon --python=server.py
+  CMD twistd --nodaemon --python=quote_http.py
