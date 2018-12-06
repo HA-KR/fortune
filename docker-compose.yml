@@ -4,8 +4,7 @@ services:
     image: navee-hari/web:latest
     build: ./apps/web
     ports:
-      - "5000:5000"
-      - "8000:$PORT"
+      - "$PORT:8080"
     command: "twistd --nodaemon --python=quote_http.py"
     volumes:
       - ./apps/web:/apps/web
