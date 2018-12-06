@@ -28,6 +28,8 @@ class QuoteResource(resource.Resource):
         return msg
 
 
-reactor.listenTCP(8080, server.Site(QuoteResource()))
+PORT = 8080
+proxy_port = int(os.environ.get('PORT', PORT))
+reactor.listenTCP(proxy_port, server.Site(QuoteResource()))
 reactor.run()
 
