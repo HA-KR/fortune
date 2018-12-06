@@ -28,6 +28,6 @@ class QuoteResource(resource.Resource):
         return msg
 
 
-reactor.listenTCP('8080', server.Site(QuoteResource()))
+reactor.listenTCP(8080, server.Site(QuoteResource()))
 reactor.run()
 
