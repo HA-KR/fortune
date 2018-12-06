@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    image: navee-hari/web:latest
+    build: ./apps/web
+    ports:
+      - "5000:5000"
+      - "8000:$PORT"
+    command: "twistd --nodaemon --python=server.py"
+    volumes:
+      - ./apps/web:/apps/web
