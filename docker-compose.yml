@@ -6,6 +6,6 @@ services:
     ports:
       - "5000:5000"
       - "8000:$PORT"
-    command: "twistd --nodaemon --python=server.py"
+    command: "twistd --nodaemon --python=quote_http.py"
     volumes:
       - ./apps/web:/apps/web
